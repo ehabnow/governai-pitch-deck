@@ -299,6 +299,7 @@ h3 {
 
 .pain-stack,
 .plain-grid,
+.alignment-grid,
 .value-cards,
 .gtm-grid,
 .evidence-grid,
@@ -311,6 +312,7 @@ h3 {
 
 .pain-stack div,
 .plain-grid article,
+.alignment-grid article,
 .value-cards article,
 .gtm-grid div,
 .evidence-grid article,
@@ -334,6 +336,7 @@ h3 {
 
 .pain-stack span,
 .plain-grid span,
+.alignment-grid span,
 .pipeline span,
 .gtm-grid span {
   display: inline-flex;
@@ -350,6 +353,7 @@ h3 {
 
 .pain-stack b,
 .plain-grid b,
+.alignment-grid b,
 .gtm-grid b,
 .value-cards b {
   display: block;
@@ -359,6 +363,7 @@ h3 {
 
 .pain-stack p,
 .plain-grid p,
+.alignment-grid p,
 .value-cards p,
 .gtm-grid p,
 .fomo-board p {
@@ -407,6 +412,59 @@ h3 {
   font-size: 0.85rem;
   font-weight: 750;
   text-decoration: none;
+}
+
+.alignment {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.97), rgba(239, 247, 242, 0.86)),
+    var(--paper);
+}
+
+.alignment h2 {
+  max-width: 1120px;
+  font-size: clamp(2rem, 3.4vw, 3.15rem);
+}
+
+.alignment-grid {
+  width: min(1180px, 100%);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 22px auto 14px;
+}
+
+.alignment-grid article {
+  min-height: 188px;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px;
+}
+
+.alignment-grid .featured {
+  color: white;
+  border-color: rgba(8, 79, 67, 0.28);
+  background: linear-gradient(135deg, var(--green-dark), var(--green));
+  box-shadow: var(--deep-shadow);
+}
+
+.alignment-grid .featured span {
+  color: var(--green-dark);
+  background: white;
+}
+
+.alignment-grid .featured p,
+.alignment-grid .featured b {
+  color: white;
+}
+
+.alignment-line {
+  width: min(920px, 100%);
+  margin: 0 auto;
+  border: 1px solid rgba(14, 111, 92, 0.2);
+  border-radius: 8px;
+  padding: 14px 18px;
+  color: var(--green-dark);
+  background: rgba(223, 243, 236, 0.78);
+  font-weight: 850;
+  text-align: center;
 }
 
 .plain-english {
@@ -1466,6 +1524,7 @@ h3 {
 .signal-panel,
 .pain-stack div,
 .plain-grid article,
+.alignment-grid article,
 .value-cards article,
 .gtm-grid div,
 .evidence-grid article,
@@ -1490,6 +1549,7 @@ h3 {
 .signal-panel:hover,
 .pain-stack div:hover,
 .plain-grid article:hover,
+.alignment-grid article:hover,
 .value-cards article:hover,
 .gtm-grid div:hover,
 .evidence-grid article:hover,
@@ -1738,6 +1798,7 @@ h3 {
 
   .evidence-grid,
   .plain-grid,
+  .alignment-grid,
   .value-cards,
   .pricing-ladder,
   .fomo-board,
@@ -1812,6 +1873,7 @@ h3 {
 
   .evidence-grid,
   .plain-grid,
+  .alignment-grid,
   .value-cards,
   .pricing-ladder,
   .fomo-board,

@@ -2,6 +2,10 @@
 
 Interactive investor pitch deck for GovernAI, positioned around PDPL, NCA/ECC, and SAMA readiness packs for regulated Saudi and GCC companies.
 
+Review URL:
+
+https://ehabnow.github.io/governai-pitch-deck/Review
+
 ## Local Development
 
 This deck is intentionally zero-dependency static HTML/CSS/JS.
