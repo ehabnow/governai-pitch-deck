@@ -1,6 +1,6 @@
 # GovernAI Pitch Deck
 
-Interactive investor pitch deck for GovernAI.
+Interactive investor pitch deck for GovernAI, positioned around PDPL, NCA/ECC, and SAMA readiness packs for regulated Saudi and GCC companies.
 
 ## Local Development
 
@@ -18,7 +18,7 @@ Deploy the `GovernAI_Pitch_Deck` folder to Vercel as a static site.
 
 - Sequoia Capital pitch structure guidance
 - Guy Kawasaki 10/20/30 pitch guideline
-- SAMA PDPL circular
+- PDPL readiness and SAMA PDPL circular
 - SAMA open banking licensing announcement
 - Saudi Financial Sector Development Program target
 - NCA Essential Cybersecurity Controls
