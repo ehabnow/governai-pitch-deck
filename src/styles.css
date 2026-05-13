@@ -681,6 +681,189 @@ h3 {
   text-align: center;
 }
 
+.service-explainer {
+  background:
+    radial-gradient(circle at 84% 16%, rgba(45, 143, 183, 0.1), transparent 26%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(223, 243, 236, 0.76)),
+    var(--paper);
+}
+
+.service-explainer h2 {
+  max-width: 1120px;
+  font-size: clamp(2.1rem, 3.9vw, 3.75rem);
+}
+
+.service-flow {
+  width: min(1180px, 100%);
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(300px, 1.1fr) minmax(0, 0.95fr);
+  gap: 16px;
+  align-items: stretch;
+  margin: 28px auto 16px;
+}
+
+.service-panel,
+.engine-card,
+.review-badge {
+  border: 1px solid rgba(8, 79, 67, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow);
+}
+
+.service-panel {
+  min-height: 300px;
+  padding: 22px;
+}
+
+.service-panel span,
+.engine-card span,
+.review-badge span {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0 12px;
+  color: var(--green-dark);
+  background: var(--mint);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.service-panel b,
+.engine-card b,
+.review-badge b {
+  display: block;
+  margin: 16px 0 12px;
+  color: var(--ink);
+  font-size: clamp(1.22rem, 1.8vw, 1.55rem);
+  line-height: 1.14;
+}
+
+.service-panel ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service-panel li {
+  position: relative;
+  border: 1px solid rgba(8, 79, 67, 0.12);
+  border-radius: 8px;
+  padding: 10px 12px 10px 34px;
+  color: var(--muted);
+  background: rgba(251, 253, 251, 0.8);
+  line-height: 1.24;
+}
+
+.service-panel li::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--green);
+  transform: translateY(-50%);
+}
+
+.output-panel {
+  border-color: rgba(14, 111, 92, 0.3);
+}
+
+.output-panel li::before {
+  background: var(--gold);
+}
+
+.service-engine {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 12px;
+}
+
+.engine-card {
+  padding: 22px;
+  color: white;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(241, 217, 159, 0.24), transparent 28%),
+    linear-gradient(135deg, var(--night), var(--green-dark));
+  box-shadow: var(--deep-shadow);
+}
+
+.engine-card span {
+  color: var(--green-dark);
+  background: white;
+}
+
+.engine-card b {
+  color: white;
+}
+
+.engine-rows {
+  display: grid;
+  gap: 10px;
+}
+
+.engine-rows p {
+  display: grid;
+  grid-template-columns: 1fr 46px 1fr;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  padding: 11px 12px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.engine-rows strong,
+.engine-rows em {
+  color: white;
+  font-style: normal;
+  font-size: 0.9rem;
+}
+
+.engine-rows i {
+  height: 2px;
+  background: linear-gradient(90deg, var(--cyan), var(--gold));
+}
+
+.review-badge {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+}
+
+.review-badge b {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.service-strip {
+  width: min(940px, 100%);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.service-strip span {
+  border: 1px solid rgba(14, 111, 92, 0.18);
+  border-radius: 8px;
+  padding: 13px 14px;
+  color: white;
+  background: linear-gradient(135deg, var(--green-dark), var(--green));
+  font-weight: 850;
+  text-align: center;
+}
+
 .benchmark {
   background:
     linear-gradient(135deg, #fbfcf8 0%, #eef6f4 100%),
@@ -1558,6 +1741,7 @@ h3 {
 }
 
 body[data-active-slide="1"] .slide-controls,
+body[data-active-slide="2"] .slide-controls,
 body[data-active-slide="24"] .slide-controls {
   display: none;
 }
@@ -1966,6 +2150,7 @@ body[data-active-slide="24"] .slide-controls {
   .market-layout,
   .ask-layout,
   .product-grid,
+  .service-flow,
   .before-after {
     grid-template-columns: 1fr;
   }
@@ -2119,6 +2304,10 @@ body[data-active-slide="24"] .slide-controls {
 
   .benchmark-bottom {
     width: 100%;
+  }
+
+  .service-strip {
+    grid-template-columns: 1fr;
   }
 
   .slide-controls {
