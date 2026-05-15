@@ -1744,7 +1744,8 @@ h3 {
 
 body[data-active-slide="1"] .slide-controls,
 body[data-active-slide="2"] .slide-controls,
-body[data-active-slide="20"] .slide-controls {
+body[data-active-slide="18"] .slide-controls,
+body[data-active-slide="21"] .slide-controls {
   display: none;
 }
 
@@ -1903,6 +1904,7 @@ body[data-active-slide="20"] .slide-controls {
 .fomo-board div,
 .pricing-ladder div,
 .timeline div,
+.team-card,
 .capital-grid article {
   transition:
     transform 220ms ease,
@@ -1922,6 +1924,7 @@ body[data-active-slide="20"] .slide-controls {
 .workflow:hover,
 .pricing-ladder div:hover,
 .timeline div:hover,
+.team-card:hover,
 .capital-grid article:hover {
   transform: translateY(-4px);
   border-color: rgba(14, 111, 92, 0.3);
@@ -2051,6 +2054,134 @@ body[data-active-slide="20"] .slide-controls {
 
 .premium-panel li {
   color: rgba(255, 255, 255, 0.78);
+}
+
+.team-slide {
+  background:
+    radial-gradient(circle at 88% 16%, rgba(45, 143, 183, 0.1), transparent 25%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(223, 243, 236, 0.8)),
+    var(--paper);
+}
+
+.team-slide h2 {
+  max-width: 1120px;
+  font-size: clamp(2rem, 3.7vw, 3.45rem);
+}
+
+.team-grid {
+  width: min(1180px, 100%);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 26px auto 16px;
+}
+
+.team-card {
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(8, 79, 67, 0.16);
+  border-radius: 8px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: var(--shadow);
+}
+
+.team-card.founder-card {
+  color: white;
+  border-color: rgba(241, 217, 159, 0.4);
+  background:
+    radial-gradient(circle at 78% 12%, rgba(241, 217, 159, 0.28), transparent 28%),
+    linear-gradient(135deg, var(--night), var(--green-dark));
+  box-shadow: var(--deep-shadow);
+}
+
+.team-role {
+  display: inline-flex;
+  align-self: flex-start;
+  min-height: 30px;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0 12px;
+  color: var(--green-dark);
+  background: var(--mint);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.founder-card .team-role {
+  color: var(--green-dark);
+  background: white;
+}
+
+.team-card b {
+  display: block;
+  margin: 18px 0 12px;
+  font-size: clamp(1.45rem, 2.1vw, 1.95rem);
+  line-height: 1.05;
+}
+
+.team-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.45;
+}
+
+.founder-card p,
+.founder-card b {
+  color: white;
+}
+
+.team-proof {
+  display: grid;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.team-proof span {
+  border: 1px solid rgba(8, 79, 67, 0.12);
+  border-radius: 8px;
+  padding: 9px 10px;
+  color: var(--green-dark);
+  background: rgba(223, 243, 236, 0.82);
+  font-size: 0.86rem;
+  font-weight: 850;
+}
+
+.founder-card .team-proof span {
+  border-color: rgba(255, 255, 255, 0.18);
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.team-role-map {
+  width: min(1040px, 100%);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1fr) 28px minmax(0, 1fr) 28px minmax(0, 1.25fr);
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.team-role-map span {
+  border: 1px solid rgba(14, 111, 92, 0.16);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: var(--green-dark);
+  background: white;
+  box-shadow: 0 12px 28px rgba(8, 20, 17, 0.07);
+  font-size: 0.88rem;
+  font-weight: 850;
+  text-align: center;
+}
+
+.team-role-map i {
+  height: 3px;
+  background: linear-gradient(90deg, var(--green), var(--gold));
 }
 
 .capital-plan {
@@ -2254,6 +2385,30 @@ body[data-active-slide="20"] .slide-controls {
     gap: 12px;
     margin-top: 22px;
   }
+
+  .team-grid {
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .team-card {
+    min-height: 292px;
+    padding: 18px;
+  }
+
+  .team-card p {
+    font-size: 0.9rem;
+    line-height: 1.38;
+  }
+
+  .team-proof span {
+    padding: 7px 9px;
+  }
+
+  .team-role-map span {
+    padding: 10px 12px;
+    font-size: 0.82rem;
+  }
 }
 
 @media (max-width: 980px) {
@@ -2297,16 +2452,27 @@ body[data-active-slide="20"] .slide-controls {
   .roi-strip,
   .investor-grid,
   .pressure-map,
-  .proof-grid,
-  .capital-grid,
-  .ask-metrics,
-  .premium-panel ul,
-  .source-board {
+    .proof-grid,
+    .capital-grid,
+    .team-grid,
+    .ask-metrics,
+    .premium-panel ul,
+    .source-board {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .pipeline {
     grid-template-columns: 1fr;
+  }
+
+  .team-role-map {
+    grid-template-columns: 1fr;
+  }
+
+  .team-role-map i {
+    width: 3px;
+    height: 20px;
+    justify-self: center;
   }
 
   .pipeline i {
@@ -2383,11 +2549,12 @@ body[data-active-slide="20"] .slide-controls {
   .roi-strip,
   .investor-grid,
   .pressure-map,
-  .proof-grid,
-  .capital-grid,
-  .ask-metrics,
-  .premium-panel ul,
-  .source-board {
+    .proof-grid,
+    .capital-grid,
+    .team-grid,
+    .ask-metrics,
+    .premium-panel ul,
+    .source-board {
     grid-template-columns: 1fr;
   }
 
