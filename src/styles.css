@@ -2087,15 +2087,6 @@ body[data-active-slide="21"] .slide-controls {
   box-shadow: var(--shadow);
 }
 
-.team-card.founder-card {
-  color: white;
-  border-color: rgba(241, 217, 159, 0.4);
-  background:
-    radial-gradient(circle at 78% 12%, rgba(241, 217, 159, 0.28), transparent 28%),
-    linear-gradient(135deg, var(--night), var(--green-dark));
-  box-shadow: var(--deep-shadow);
-}
-
 .team-role {
   display: inline-flex;
   align-self: flex-start;
@@ -2111,11 +2102,6 @@ body[data-active-slide="21"] .slide-controls {
   text-transform: uppercase;
 }
 
-.founder-card .team-role {
-  color: var(--green-dark);
-  background: white;
-}
-
 .team-card b {
   display: block;
   margin: 18px 0 12px;
@@ -2128,11 +2114,6 @@ body[data-active-slide="21"] .slide-controls {
   color: var(--muted);
   font-size: 0.96rem;
   line-height: 1.45;
-}
-
-.founder-card p,
-.founder-card b {
-  color: white;
 }
 
 .team-proof {
@@ -2150,12 +2131,6 @@ body[data-active-slide="21"] .slide-controls {
   background: rgba(223, 243, 236, 0.82);
   font-size: 0.86rem;
   font-weight: 850;
-}
-
-.founder-card .team-proof span {
-  border-color: rgba(255, 255, 255, 0.18);
-  color: white;
-  background: rgba(255, 255, 255, 0.1);
 }
 
 .team-role-map {
