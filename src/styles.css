@@ -1743,7 +1743,9 @@ h3 {
 }
 
 body[data-active-slide="1"] .slide-controls,
-body[data-active-slide="11"] .slide-controls {
+body[data-active-slide="11"] .slide-controls,
+body[data-active-slide="18"] .slide-controls,
+body[data-active-slide="21"] .slide-controls {
   display: none;
 }
 
