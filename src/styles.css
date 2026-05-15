@@ -1743,9 +1743,7 @@ h3 {
 }
 
 body[data-active-slide="1"] .slide-controls,
-body[data-active-slide="2"] .slide-controls,
-body[data-active-slide="18"] .slide-controls,
-body[data-active-slide="21"] .slide-controls {
+body[data-active-slide="11"] .slide-controls {
   display: none;
 }
 
@@ -2054,6 +2052,91 @@ body[data-active-slide="21"] .slide-controls {
 
 .premium-panel li {
   color: rgba(255, 255, 255, 0.78);
+}
+
+.compact-callout {
+  margin-top: 22px;
+  padding: 18px;
+}
+
+.compact-callout span {
+  font-size: 1.2rem;
+}
+
+#slide-2 .pain-stack {
+  gap: 12px;
+}
+
+#slide-2 .pain-stack div {
+  padding: 15px 16px;
+}
+
+.compact-buyer {
+  width: 100%;
+  grid-template-columns: 0.74fr 1fr 1fr;
+  margin: 0;
+}
+
+.compact-buyer div {
+  padding: 14px;
+  font-size: 0.9rem;
+}
+
+.compact-benchmark {
+  width: min(1180px, 100%);
+  margin-top: 18px;
+  padding: 15px 18px;
+}
+
+.compact-benchmark b,
+.compact-benchmark span {
+  font-size: clamp(0.95rem, 1.15vw, 1.05rem);
+}
+
+.competition-moat {
+  width: min(1180px, 100%);
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  gap: 18px;
+  margin: 24px auto 0;
+  align-items: stretch;
+}
+
+.competition-moat .matrix {
+  width: 100%;
+  margin: 0;
+}
+
+.competition-moat .matrix div {
+  padding: 14px;
+  font-size: 0.92rem;
+}
+
+.moat-stack {
+  display: grid;
+  gap: 12px;
+}
+
+.moat-stack article {
+  border: 1px solid rgba(8, 79, 67, 0.16);
+  border-radius: 8px;
+  padding: 18px;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.moat-stack b {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--green-dark);
+  font-size: 1.05rem;
+}
+
+.moat-stack p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.4;
 }
 
 .team-slide {
@@ -2402,7 +2485,8 @@ body[data-active-slide="21"] .slide-controls {
   .ask-layout,
   .product-grid,
   .service-flow,
-  .before-after {
+  .before-after,
+  .competition-moat {
     grid-template-columns: 1fr;
   }
 
@@ -2471,6 +2555,14 @@ body[data-active-slide="21"] .slide-controls {
   }
 
   .buyer-table {
+    grid-template-columns: 1fr;
+  }
+
+  .compact-buyer {
+    width: 100%;
+  }
+
+  .competition-moat .matrix {
     grid-template-columns: 1fr;
   }
 

@@ -20,6 +20,7 @@ function updateProgress() {
   progressBar.style.width = `${percent}%`;
   slideCounter.textContent = `${active + 1} / ${slides.length}`;
   document.body.dataset.activeSlide = String(active + 1);
+  slides[active]?.classList.add("is-visible");
 
   const activeId = slides[active]?.id;
   navLinks.forEach((link) => {
@@ -59,3 +60,6 @@ if ("IntersectionObserver" in window) {
 }
 
 updateProgress();
+
+window.addEventListener("load", updateProgress);
+window.addEventListener("hashchange", updateProgress);
